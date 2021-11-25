@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "A marketplace for selling anything that you do not need anymore",
+    "githubUrl": "https://github.com/ZedanSaheer/my-first-react-native-app"
   }
 }
