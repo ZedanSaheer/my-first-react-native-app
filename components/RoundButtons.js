@@ -1,10 +1,10 @@
 import React from 'react'
 import { StyleSheet, Text, TouchableOpacity } from 'react-native'
 
-const RoundButtons = (props) => {
+const RoundButtons = ({text,navigation}) => {
     return (
-        <TouchableOpacity style={styles.button}>
-            <Text style={styles.text}>{props.text}</Text>
+        <TouchableOpacity style={styles.button} onPress={()=>navigation.navigate('people')}>
+            <Text style={styles.text}>{text}</Text>
         </TouchableOpacity>
     )
 }

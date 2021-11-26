@@ -2,11 +2,13 @@ import React from 'react'
 import { Alert, Button, Image, ImageBackground, StyleSheet, Text, View } from 'react-native'
 import RoundButtons from '../../components/RoundButtons'
 
-const WelcomeScreen = (props) => {
+const WelcomeScreen = ({ navigation }) => {
     return (
-        <ImageBackground source={require("../assets/download.jpg")} style={styles.background}>    
+        <ImageBackground source={require("../people/background.jpeg")} style={styles.background}>
+            <View style={styles.container}>
                 <Image source={require("../assets/logo.png")} style={styles.logo} />
-                <RoundButtons text="Let's Explore ⤴" />
+            </View>
+            <RoundButtons text="Let's Explore ⤴" navigation={navigation} />
         </ImageBackground>
     )
 }
@@ -15,12 +17,23 @@ const styles = StyleSheet.create({
     background: {
         flex: 1,
         justifyContent: "space-between",
-        paddingTop: 10,
+        paddingTop: 40,
         alignItems: "center"
     }
     , logo: {
-        width: "60%",
-        height: 160,
+        width: 165,
+        height: 100,
+        position:"relative",
+        bottom:20,
+        left:0
+    },
+    container:{
+        width:"100%",
+        alignItems:"center",
+        height:100,
+        backgroundColor:"white",
+        marginTop:100,
+        borderRadius:10
     }
 })
 

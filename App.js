@@ -1,25 +1,3 @@
-import React from 'react';
-import {
-  StyleSheet
-  , View
-  , SafeAreaView
-  , Platform
-  , StatusBar
-} from 'react-native';
-import WelcomeScreen from './app/screens/WelcomeScreen';
+import Routes from "./Routes";
 
-export default function App() {
-
-  return (
-    <WelcomeScreen />
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    paddingTop: Platform.OS === "android" && StatusBar.currentHeight
-  },
-});
-
+export default Routes
